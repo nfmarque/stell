@@ -78,7 +78,9 @@ gateway_0 = {
 	
 	on_build_start = {}
 	on_build_cancel = {}	
-	on_build_complete = {}
+	on_build_complete = {
+		from = { country_event = { id = apoc.14 } }
+	}
 }
 
 gateway_final = {
@@ -118,7 +120,10 @@ gateway_final = {
 				finish_upgrade = yes
 			}
 		}
-		from = { country_event = { id = apoc.11 } }
+		from = { 
+			country_event = { id = apoc.13 }
+			country_event = { id = apoc.11 }
+		}
 	}
 }
 
@@ -130,6 +135,7 @@ gateway_ruined = {
 	build_outside_gravity_well = yes
 	bypass_type = gateway
 	show_galactic_map_icon = no
+	construction_blocks_others = no
 
 	potential = {
 		always = no
@@ -171,15 +177,17 @@ gateway_restored = {
 			limit = { num_active_gateways = 1 }
 			random_megastructure = {
 				limit = { is_megastructure_type = gateway_ruined }
-				solar_system = {
-					starbase = {
-						owner = { set_country_flag = did_not_repair_gateway }
-					}
+				if = {
+					limit = { exists = solar_system.starbase }
+					solar_system.starbase.owner = { set_country_flag = did_not_repair_gateway }
 				}
 				upgrade_megastructure_to = gateway_restored
 				finish_upgrade = yes
 			}
 		}
-		from = { country_event = { id = apoc.10 } }
+		from = { 
+			country_event = { id = apoc.12 }
+			country_event = { id = apoc.10 }
+		}
 	}
 }

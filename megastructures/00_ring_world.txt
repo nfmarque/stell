@@ -17,7 +17,7 @@ ring_world_1 = {
 	}
 
 	potential = {
-		has_ascension_perk = ap_the_circle_of_life
+		has_ascension_perk = ap_galactic_wonders
 	}
 	
 	possible = {
@@ -47,6 +47,25 @@ ring_world_1 = {
 		custom_tooltip = {
 			fail_text = "requires_no_black_hole"
 			NOT = { is_star_class = sc_black_hole }
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_binary_trinary"
+			NOR = {
+				is_star_class = sc_binary_1
+				is_star_class = sc_binary_2
+				is_star_class = sc_binary_3
+				is_star_class = sc_binary_4
+				is_star_class = sc_binary_5
+				is_star_class = sc_binary_6
+				is_star_class = sc_binary_7
+				is_star_class = sc_binary_8
+				is_star_class = sc_binary_9
+				is_star_class = sc_binary_10
+				is_star_class = sc_trinary_1
+				is_star_class = sc_trinary_2
+				is_star_class = sc_trinary_3
+				is_star_class = sc_trinary_4
+			}
 		}
 
 		custom_tooltip = {
@@ -113,7 +132,7 @@ ring_world_2_intermediate = {
 	}
 
 	possible = {
-		from = { has_ascension_perk = ap_the_circle_of_life }
+		from = { has_ascension_perk = ap_galactic_wonders }
 	}
 	
 	on_build_start = {}
@@ -123,7 +142,10 @@ ring_world_2_intermediate = {
 			limit = { is_star = no }
 			remove_planet = yes 
 		}
-		asteroids_distance = 0
+		set_asteroid_belt = {
+			radius = 0
+		}
+		
 		remove_megastructure = fromfrom
 		spawn_megastructure = {
 			name = "NAME_Ring_Section_A"
@@ -137,7 +159,7 @@ ring_world_2_intermediate = {
 		spawn_megastructure = {
 			name = "NAME_Ring_Section_B"
 			type = "ring_world_2"
-			orbit_angle = 92.5
+			orbit_angle = 90
 			orbit_distance = 45
 			owner = from
 			graphical_culture = fromfrom
@@ -146,7 +168,7 @@ ring_world_2_intermediate = {
 		spawn_megastructure = {
 			name = "NAME_Ring_Section_C"
 			type = "ring_world_2"
-			orbit_angle = 185
+			orbit_angle = 180
 			orbit_distance = 45
 			owner = from
 			graphical_culture = fromfrom
@@ -155,7 +177,7 @@ ring_world_2_intermediate = {
 		spawn_megastructure = {
 			name = "NAME_Ring_Section_D"
 			type = "ring_world_2"
-			orbit_angle = 277.5
+			orbit_angle = 270
 			orbit_distance = 45
 			owner = from
 			graphical_culture = fromfrom
@@ -190,7 +212,7 @@ ring_world_3_intermediate = {
 	}
 
 	possible = {
-		from = { has_ascension_perk = ap_the_circle_of_life }
+		from = { has_ascension_perk = ap_galactic_wonders }
 	}
 
 	on_build_complete = {

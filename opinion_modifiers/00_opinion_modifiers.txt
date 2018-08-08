@@ -2738,14 +2738,6 @@ opinion_worships_our_holy_world = {
 	opinion = {
 		base = 50
 	}
-
-	accumulative = yes
-	
-	min = -250
-
-	decay = {
-		base = 1
-	}
 }
 
 ##########################################################################
@@ -2951,8 +2943,9 @@ triggered_opinion_synthetics_fanatic = {
 triggered_opinion_synthetics_small = {
 	trigger = {
 		is_cyborg_empire = no
-		is_mechanical_empire = no	
+		is_mechanical_empire = no
 		NOR = {
+			has_authority = auth_machine_intelligence
 			has_ethic = ethic_spiritualist
 			has_ethic = ethic_fanatic_spiritualist
 			has_ethic = ethic_materialist
@@ -3069,7 +3062,7 @@ triggered_materialist_opinion_of_machine_empires = {
 		}
 	}
 	opinion = {
-		base = 20
+		base = 10
 	}
 }
 
@@ -3085,7 +3078,7 @@ triggered_fanatic_materialist_opinion_of_machine_empires = {
 		}
 	}
 	opinion = {
-		base = 40
+		base = 20
 	}
 }
 

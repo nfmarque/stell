@@ -9,6 +9,7 @@ ship_design = {
 ship_design = {
 	name = "NAME_F79"
 	ship_size = pirate_destroyer
+	is_event_design = yes
 	
 	section = {
 		template = "PIRATE_DESTROYER_MID_M1S2M1"
@@ -54,6 +55,7 @@ ship_design = {
 ship_design = {
 	name = "NAME_R44"
 	ship_size = pirate_corvette
+	is_event_design = yes
 	section = {
 		template = "PIRATE_CORVETTE_MID_M1S1"
 		slot = "mid"
@@ -90,6 +92,7 @@ ship_design = {
 ship_design = {
 	name = "NAME_Alien_Ship"
 	ship_size = alien_racing_ship
+	is_event_design = yes
 
 	section = {
 		template = "alien_racing_section"
@@ -123,6 +126,7 @@ ship_design = {
 ship_design = {
 	name = "NAME_Derelict"
 	ship_size = cruiser
+	is_event_design = yes
 	section = {
 		template = "CRUISER_BOW_L1"
 		slot = "bow"
@@ -190,6 +194,7 @@ ship_design = {
 ship_design = {
 	name = "NAME_Sword"
 	ship_size = eventship_01
+	is_event_design = yes
 	
 	section = {
 		template = "eventship_01_section"
@@ -216,9 +221,17 @@ ship_design = {
 			template = "MEDIUM_GAMMA_LASER"
 		}
 		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "MEDIUM_GAMMA_LASER"
+		}		
+		component = {
 			slot = "LARGE_GUN_01"
-			template = "LARGE_GAMMA_LASER"
+			template = "ENERGY_TORPEDO_2"
 		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "ENERGY_TORPEDO_2"
+		}		
 		component = {
 			slot = "MEDIUM_UTILITY_1"
 			template = "MEDIUM_SHIELD_4"
@@ -237,13 +250,24 @@ ship_design = {
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_5"
-			template = "MEDIUM_ARMOR_4"
+			template = "MEDIUM_SHIELD_4"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_6"
-			template = "MEDIUM_ARMOR_4"
+			template = "MEDIUM_SHIELD_4"
 		}	
-	
+		component = {
+			slot = "MEDIUM_UTILITY_7"
+			template = "MEDIUM_ARMOR_4"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_8"
+			template = "MEDIUM_ARMOR_4"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_BOOSTER"
+		}			
 	}
 	required_component = "HYPER_DRIVE_3"
 	required_component = "COMBAT_COMPUTER_LINE_ADVANCED"
@@ -256,6 +280,7 @@ ship_design = {
 ship_design = {
 	name = "NAME_Seeker"
 	ship_size = eventship_02
+	is_event_design = yes
 	
 	section = {
 		template = "eventship_02_section"
@@ -297,6 +322,7 @@ ship_design = {
 ship_design = {
 	name = "NAME_Voidstalker"
 	ship_size = eventship_05
+	is_event_design = yes
 	
 	section = {
 		template = "eventship_05_section"
@@ -358,6 +384,7 @@ ship_design = {
 ship_design = {
 	name = "NAME_Starfang"
 	ship_size = eventship_06
+	is_event_design = yes
 	
 	section = {
 		template = "eventship_06_section"
@@ -407,6 +434,7 @@ ship_design = {
 ship_design = {
 	name = "NAME_Persistent"
 	ship_size = eventship_07
+	is_event_design = yes
 	
 	section = {
 		template = "eventship_07_section"
@@ -466,4 +494,226 @@ ship_design = {
 	required_component = "SHIP_THRUSTER_2"
 	required_component = "SENSOR_2"
 	required_component = "CORVETTE_COLD_FUSION_REACTOR"
+}
+
+# Mardak Vol Haters Anomaly Chain Ships
+
+ship_design = {
+	name = "NAME_mardak_vol_haters_corvette"
+	ship_size = eventship_01
+	is_event_design = yes
+	
+	section = {
+		template = "eventship_01_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_DISRUPTOR_3"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_DISRUPTOR_3"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_DISRUPTOR_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_GAMMA_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "MEDIUM_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_SHIELD_4"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "MEDIUM_SHIELD_4"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "MEDIUM_SHIELD_4"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "MEDIUM_SHIELD_4"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_5"
+			template = "MEDIUM_ARMOR_4"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_6"
+			template = "MEDIUM_ARMOR_4"
+		}
+	}
+	required_component = "HYPER_DRIVE_3"
+	required_component = "COMBAT_COMPUTER_LINE_ADVANCED"
+	required_component = "SHIP_THRUSTER_3"
+	required_component = "SENSOR_3"
+	required_component = "CRUISER_ANTIMATTER_REACTOR"
+}
+
+ship_design = {
+	name = "NAME_mardak_vol_haters_destroyer"
+	ship_size = eventship_07
+	is_event_design = yes
+	
+	section = {
+		template = "eventship_07_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "AUTOCANNON_2"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "AUTOCANNON_2"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_MASS_DRIVER_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "MEDIUM_MASS_DRIVER_3"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_ARMOR_3"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "MEDIUM_ARMOR_3"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "MEDIUM_ARMOR_3"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "MEDIUM_ARMOR_3"
+		}		
+	}
+	required_component = "HYPER_DRIVE_2"
+	required_component = "COMBAT_COMPUTER_PICKET_BASIC"
+	required_component = "SHIP_THRUSTER_2"
+	required_component = "SENSOR_2"
+	required_component = "DESTROYER_COLD_FUSION_REACTOR"
+}
+
+ship_design = {
+	name = "NAME_mardak_vol_haters_cruiser"
+	ship_size = eventship_05
+	is_event_design = yes
+	
+	section = {
+		template = "eventship_05_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_XRAY_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_XRAY_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_XRAY_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "MEDIUM_PLASMA_2"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "MEDIUM_PLASMA_2"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_XRAY_LASER"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "MEDIUM_ARMOR_3"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "MEDIUM_ARMOR_3"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "MEDIUM_ARMOR_3"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_5"
+			template = "MEDIUM_SHIELD_3"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_6"
+			template = "MEDIUM_SHIELD_3"
+		}		
+	}
+	required_component = "HYPER_DRIVE_2"
+	required_component = "COMBAT_COMPUTER_LINE_BASIC"
+	required_component = "SHIP_THRUSTER_2"
+	required_component = "SENSOR_2"
+	required_component = "CRUISER_ANTIMATTER_REACTOR"
+}
+
+ship_design = {
+	name = "NAME_mardak_vol_haters_colossus"
+	ship_size = colossus
+	is_event_design = yes
+	
+	section = {
+		template = "SHIP_COLOSSUS_SECTION"
+		slot = "ship"
+		
+		component = {
+			slot = "PLANET_KILLER_GUN_01"
+			template = "PLANET_KILLER_CRACKER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SHIELD_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SHIELD_5"
+		}
+	}
+	required_component = "HYPER_DRIVE_2"
+	required_component = "COMBAT_COMPUTER_PICKET_BASIC"
+	required_component = "SHIP_THRUSTER_2"
+	required_component = "SENSOR_2"
+	required_component = "DESTROYER_ANTIMATTER_REACTOR"
 }

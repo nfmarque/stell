@@ -72,12 +72,12 @@ MACHINE3 = {
 
 	ship_class_names = {
 		generic = {
-		
-		}		
+		}
 	}
 
 	fleet_names = {
 		random_names = {
+			"Vigilant Security Echelon" "Watchful Security Echelon" "Tireless Security Echelon" "Enduring Security Echelon" "Attendant Security Echelon" "Stalwart Security Echelon" "Resolute Security Echelon" "Unflinching Security Echelon" "Inerrant Security Echelon" "Steadfast Security Echelon" "Ardent Security Echelon"
 		}
 		sequential_name = "Security Echelon %CCC%"
 	}
@@ -110,6 +110,10 @@ MACHINE3 = {
 		
 		clone_army = {
 			sequential_name = "%O% Bio-Curated Clones"
+		}
+
+		machine_occupation_army = {
+			sequential_name = "%O% Occupation Caretaker Squad"
 		}
 	}
 		
