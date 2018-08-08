@@ -117,8 +117,10 @@ pirate_station = {
 	modifier = {
 		ship_evasion_mult = -1
 		ship_armor_add = 35
-		ship_weapon_range_mult = 0.20
 		ship_upkeep_mult = -0.25
+	}
+	ship_modifier = {
+		ship_weapon_range_mult = 0.20
 	}
 	max_hitpoints = 2000
 	size_multiplier = 4

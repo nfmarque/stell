@@ -184,11 +184,10 @@ eventship_01 = {
 	rotation_speed = 0.175
 	collision_radius = 4
 	modifier = {
-		ship_evasion_add = 12
-		ship_armor_add = 35
+		ship_evasion_add = 15
 	}
-	max_hitpoints = 960
-	size_multiplier = 1
+	max_hitpoints = 2000
+	size_multiplier = 4
 	fleet_slot_size = 3
 	section_slots = { "mid" = { locator = "root" } }
 	num_target_locators = 0

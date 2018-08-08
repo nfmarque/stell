@@ -139,6 +139,9 @@ military_station_small_fallen_empire = {
 		ship_armor_regen_add_perc = 0.5
 		ship_upkeep_mult = -0.25
 	}
+	ship_modifier = {
+		ship_weapon_range_mult = 0.20
+	}
 	max_hitpoints = 5000
 
 	combat_size_multiplier = 4
@@ -171,8 +174,10 @@ military_station_large_fallen_empire = {
 	acceleration = 10
 	modifier = {
 		ship_evasion_mult = -1
-		ship_weapon_range_mult = 0.5
 		ship_upkeep_mult = -0.25
+	}
+	ship_modifier = {
+		ship_weapon_range_mult = 0.20
 	}
 	max_hitpoints = 10000
 	combat_size_multiplier = 20
