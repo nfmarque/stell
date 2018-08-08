@@ -567,6 +567,42 @@ is_berserk_fallen_machine_empire = {
 	has_valid_civic = civic_malfunctioning_custodian
 }
 
+is_binary_star = {
+	OR = {
+		is_star_class = sc_binary_1
+		is_star_class = sc_binary_2
+		is_star_class = sc_binary_3
+		is_star_class = sc_binary_4
+		is_star_class = sc_binary_5
+		is_star_class = sc_binary_6
+		is_star_class = sc_binary_7
+		is_star_class = sc_binary_8
+		is_star_class = sc_binary_9
+		is_star_class = sc_binary_10
+	}
+}
+
+is_under_crisis_bombardment = {
+	has_orbital_bombardment = yes	
+	any_fleet_in_orbit = { 
+		owner = {
+			is_crisis_faction = yes
+		}
+	}	
+}
+
+is_crisis_faction = {
+	OR = {
+		is_country_type = swarm
+		is_country_type = extradimensional
+		is_country_type = extradimensional_2
+		is_country_type = extradimensional_3
+		is_country_type = ai_empire
+		is_country_type = gray_goo
+		is_country_type = awakened_marauders
+	}
+}
+
 has_crisis = {
 	OR = {
 		has_global_flag = crisis_stage_1
@@ -602,6 +638,15 @@ is_synthetic_empire = {
 	OR = {
 		has_country_flag = synthetic_empire
 		has_authority = auth_machine_intelligence
+	}
+}
+
+is_trinary_star = {
+	OR = {
+		is_star_class = sc_trinary_1
+		is_star_class = sc_trinary_2
+		is_star_class = sc_trinary_3
+		is_star_class = sc_trinary_4
 	}
 }
 
@@ -866,11 +911,7 @@ has_total_war_cb = {
 			OR = {
 				is_country_type = awakened_fallen_empire
 				has_valid_civic = civic_hive_devouring_swarm
-				has_valid_civic = civic_machine_assimilator
-				AND = {
-					has_technology = "tech_colossus"
-					is_neighbor_of = from
-				}		
+				has_valid_civic = civic_machine_assimilator	
 				AND = {
 					has_valid_civic = civic_machine_terminator
 					from = {
@@ -895,10 +936,6 @@ has_total_war_cb = {
 				has_valid_civic = civic_hive_devouring_swarm
 				has_valid_civic = civic_machine_assimilator
 				has_valid_civic = civic_machine_terminator				
-				AND = {
-					is_neighbor_of = root
-					has_technology = "tech_colossus"
-				}	
 			}
 			from = {
 				OR = {
@@ -906,11 +943,7 @@ has_total_war_cb = {
 					has_valid_civic = civic_fanatic_purifiers
 					has_valid_civic = civic_hive_devouring_swarm
 					has_valid_civic = civic_machine_assimilator
-					has_valid_civic = civic_machine_terminator		
-					AND = {
-						is_neighbor_of = root
-						has_technology = "tech_colossus"
-					}					
+					has_valid_civic = civic_machine_terminator							
 				}	
 			}		
 		}
@@ -1054,10 +1087,88 @@ is_homicidal = {
 
 has_subjugation_req = {
 	OR = {
+		NOT = { is_country_type = default }
 		has_tradition = tr_domination_adopt
 		has_valid_civic = civic_inwards_perfection
 		has_valid_civic = civic_machine_terminator
 		has_valid_civic = civic_fanatic_purifiers
 		has_valid_civic = civic_hive_devouring_swarm
 	}
+}
+
+has_active_xuracorp_trade = {
+	OR = {
+		has_modifier = enclave_mineral_trade_1_xur
+		has_modifier = enclave_mineral_trade_2_xur
+		has_modifier = enclave_mineral_trade_3_xur
+		has_modifier = enclave_energy_trade_1_xur
+		has_modifier = enclave_energy_trade_2_xur
+		has_modifier = enclave_energy_trade_3_xur
+		has_modifier = enclave_mineral_food_trade_1_xur
+		has_modifier = enclave_mineral_food_trade_2_xur
+		has_modifier = enclave_mineral_food_trade_3_xur
+		has_modifier = enclave_energy_food_trade_1_xur
+		has_modifier = enclave_energy_food_trade_2_xur
+		has_modifier = enclave_energy_food_trade_3_xur
+		has_modifier = enclave_food_minerals_trade_1_xur
+		has_modifier = enclave_food_minerals_trade_2_xur
+		has_modifier = enclave_food_minerals_trade_3_xur
+		has_modifier = enclave_food_energy_trade_1_xur
+		has_modifier = enclave_food_energy_trade_2_xur
+		has_modifier = enclave_food_energy_trade_3_xur
+	}
+}
+
+has_active_riggan_trade = {
+	OR = {
+		has_modifier = enclave_mineral_trade_1_rig
+		has_modifier = enclave_mineral_trade_2_rig
+		has_modifier = enclave_mineral_trade_3_rig
+		has_modifier = enclave_energy_trade_1_rig
+		has_modifier = enclave_energy_trade_2_rig
+		has_modifier = enclave_energy_trade_3_rig
+		has_modifier = enclave_mineral_food_trade_1_rig
+		has_modifier = enclave_mineral_food_trade_2_rig
+		has_modifier = enclave_mineral_food_trade_3_rig
+		has_modifier = enclave_energy_food_trade_1_rig
+		has_modifier = enclave_energy_food_trade_2_rig
+		has_modifier = enclave_energy_food_trade_3_rig
+		has_modifier = enclave_food_minerals_trade_1_rig
+		has_modifier = enclave_food_minerals_trade_2_rig
+		has_modifier = enclave_food_minerals_trade_3_rig
+		has_modifier = enclave_food_energy_trade_1_rig
+		has_modifier = enclave_food_energy_trade_2_rig
+		has_modifier = enclave_food_energy_trade_3_rig
+	}
+}
+
+has_active_muutagan_trade = {
+	OR = {
+		has_modifier = enclave_mineral_trade_1_mut
+		has_modifier = enclave_mineral_trade_2_mut
+		has_modifier = enclave_mineral_trade_3_mut
+		has_modifier = enclave_energy_trade_1_mut
+		has_modifier = enclave_energy_trade_2_mut
+		has_modifier = enclave_energy_trade_3_mut
+		has_modifier = enclave_mineral_food_trade_1_mut
+		has_modifier = enclave_mineral_food_trade_2_mut
+		has_modifier = enclave_mineral_food_trade_3_mut
+		has_modifier = enclave_energy_food_trade_1_mut
+		has_modifier = enclave_energy_food_trade_2_mut
+		has_modifier = enclave_energy_food_trade_3_mut
+		has_modifier = enclave_food_minerals_trade_1_mut
+		has_modifier = enclave_food_minerals_trade_2_mut
+		has_modifier = enclave_food_minerals_trade_3_mut
+		has_modifier = enclave_food_energy_trade_1_mut
+		has_modifier = enclave_food_energy_trade_2_mut
+		has_modifier = enclave_food_energy_trade_3_mut
+	}
+}
+
+
+has_distar = {
+	#OR = {
+		# TEMP TODO [MO] ENABLE THIS
+		host_has_dlc = "Distant Stars Story Pack"
+	#}
 }

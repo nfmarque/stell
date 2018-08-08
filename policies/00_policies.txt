@@ -79,12 +79,14 @@ war_philosophy = {
 			liberation_wars
 		}
 		
+		potential = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+		
 		valid = {
 			NOR = {
 				has_ethic = "ethic_fanatic_pacifist"
 				has_valid_civic = "civic_fanatic_purifiers"
-				has_valid_civic = "civic_hive_devouring_swarm"
-				has_valid_civic = "civic_machine_terminator"
 			}
 		}
 
@@ -311,7 +313,10 @@ food_stockpiling = {
 orbital_bombardment = {
 
 	potential = {
-		is_country_type = default
+		OR = {
+			is_country_type = default
+			is_country_type = vol
+		}
 	}
 	
 	option = {
@@ -1045,8 +1050,7 @@ pre_sapients = {
 		potential = {
 			host_has_dlc = "Utopia"
 			is_synthetic_empire = no
-			NOR = {
-				has_valid_civic = civic_hive_devouring_swarm
+			NOT = {
 				has_valid_civic = civic_fanatic_purifiers
 			}
 		}

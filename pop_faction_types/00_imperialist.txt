@@ -76,6 +76,7 @@ imperialist = {
 		unfulfilled_title = "IMPERIALIST_NO_PHILOSOPHY"
 		desc = "IMPERIALIST_PHILOSOPHY_DESC"
 
+		fulfilled_effect = 5
 		unfulfilled_effect = -30
 
 		potential = {
@@ -90,7 +91,12 @@ imperialist = {
 		}
 
 		trigger = {
-			owner = { has_policy_flag = unrestricted_wars }
+			owner = { 
+				OR = {
+					has_policy_flag = unrestricted_wars 
+					has_policy_flag = liberation_wars
+				}
+			}
 		}
 	}
 
