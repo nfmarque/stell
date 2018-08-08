@@ -3229,7 +3229,15 @@ building_temple = {
 
 	destroy_if = {
 		exists = owner
-		owner = { has_authority = auth_machine_intelligence }
+		owner = {
+			OR = {
+			        has_authority = auth_machine_intelligence
+				NOR = {
+					has_ethic = ethic_spiritualist		
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}	
 	}
 	
 	upgrades = {
@@ -3300,7 +3308,15 @@ building_holotemple = {
 
 	destroy_if = {
 		exists = owner
-		owner = { has_authority = auth_machine_intelligence }
+		owner = {
+			OR = {
+			        has_authority = auth_machine_intelligence
+				NOR = {
+					has_ethic = ethic_spiritualist		
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
 	}
 	
 	allow = {
@@ -3376,7 +3392,15 @@ building_sacred_nexus = {
 
 	destroy_if = {
 		exists = owner
-		owner = { has_authority = auth_machine_intelligence }
+		owner = {
+			OR = {
+			        has_authority = auth_machine_intelligence
+				NOR = {
+					has_ethic = ethic_spiritualist		
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
 	}
 	
 	allow = {
@@ -3906,6 +3930,15 @@ building_planetary_shield_generator = {
 	
 	ai_weight = {
 		weight = 0
+                ## adicionado
+		modifier = {
+			weight = 1000
+			planet = { 
+				sector_controlled = yes 
+				owner = { is_ai = no }
+			}
+		}
+
 	}
 }
 
@@ -4021,7 +4054,7 @@ building_slave_processing = {
 	}
 	
 	ai_weight = {
-		weight = 10
+		weight = 20
 	}
 }
 
@@ -4325,7 +4358,7 @@ building_paradise_dome = {
 	}
 
 	ai_weight = {
-		factor = 10
+		factor = 20
 	}
 }
 
@@ -4540,8 +4573,10 @@ building_stronghold = {
 		}
 		modifier = {
 			factor = 0
-			planet = {
-				NOR = {
+			planet = { 
+				## adicionado
+				owner = { is_ai = yes }
+				NOR = {				        
 					unrest > 50
 					AND = {
 						planet_size > 12
@@ -4724,6 +4759,8 @@ building_fortress = {
 		modifier = {
 			factor = 0
 			planet = {
+				## adicionado
+				owner = { is_ai = yes }
 				NOR = {
 					unrest > 50
 					AND = {
