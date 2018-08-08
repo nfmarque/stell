@@ -16,7 +16,6 @@ trait_hive_mind = {
 	randomized = no
 	modification = no
 	forced_happiness = yes
-	alters_species_identity = yes
 	
 	leader_age_min = 10
 	leader_age_max = 20
